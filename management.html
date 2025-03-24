@@ -1,39 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Management Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header><label class="theme-switch">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider"></span>
-    </label></header>
-    <div class="container">
-        
-        <h1>Task Management Dashboard</h1>
-    
-        <form id="taskForm">
-            <input type="text" id="taskName" placeholder="Task Name" required>
-            <input type="text" id="taskCategory" placeholder="Category" required>
-            <select id="taskPriority">
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-            <input type="date" id="taskDueDate" required>
-            <button type="submit">Add Task</button>
-        </form>
-        
-        <div id="taskList" class="task-container" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-    </div>
-    
-    <script src="app.js"></script>
-</body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +41,7 @@
                 <option value="incomplete">Incomplete</option>
             </select>
         </div>
-        <button type="submit"> Add Task</button>
+        
 
         <div id="taskList"></div>
     </div>
