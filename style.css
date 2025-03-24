@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2F80ED, #56CCF2);
+    color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2F80ED;
+}
+
+/* Form Styling */
+#taskForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+#taskForm input, #taskForm select, #taskForm button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#taskForm button {
+    background: #27ae60;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+#taskForm button:hover {
+    background: #219150;
+}
+
+/* Task List */
+#taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.task-item.completed {
+    background: #d4edda;
+    text-decoration: line-through;
+}
+
+.task-item .actions button {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-item .actions button[data-action="edit"] {
+    background: #f39c12;
+    color: #fff;
+}
+
+.task-item .actions button[data-action="delete"] {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.task-item .actions button[data-action="toggleComplete"] {
+    background: #27ae60;
+    color: #fff;
+}
+
+/* Dark Mode */
+#darkModeToggle {
+    margin: 20px 0;
+    padding: 12px;
+    background: #000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#darkModeToggle:hover {
+    background: #333;
+}
+
+body.dark-mode {
+    background: #1e1e1e;
+    color: #f4f4f4;
+}
+
+body.dark-mode .container {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode .task-item {
+    background: #444;
+    border-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    #taskForm {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

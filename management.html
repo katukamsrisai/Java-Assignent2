@@ -1,0 +1,89 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><label class="theme-switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+    </label></header>
+    <div class="container">
+        
+        <h1>Task Management Dashboard</h1>
+    
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <input type="text" id="taskCategory" placeholder="Category" required>
+            <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="date" id="taskDueDate" required>
+            <button type="submit">Add Task</button>
+        </form>
+        
+        <div id="taskList" class="task-container" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><button id="darkModeToggle"> Dark Mode</button>
+        </header>
+    <div class="container">
+        <h1>Task Management Dashboard</h1>
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <input type="text" id="newCategory" placeholder="New Category ">
+            <select id="taskPriority">
+                <option value="High"> High</option>
+                <option value="Medium"> Medium</option>
+                <option value="Low"> Low</option>
+            </select>
+            <input type="date" id="taskDueDate" required>
+            <button type="submit"> Add Task</button>
+        </form>
+        <div class="filters">
+            <label for="categoryFilter">Filter by Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+            <label for="filterPriority">Filter by Priority:</label>
+            <select id="filterPriority">
+                <option value="all">All Priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <label for="filterCompleted">Filter by Completion:</label>
+            <select id="filterCompleted">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+        </div>
+        <button type="submit"> Add Task</button>
+
+        <div id="taskList"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
